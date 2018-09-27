@@ -2,7 +2,7 @@ package TorusPuzzle;
 
 public class Move {
 
-    enum EDirection
+    public enum EDirection
     {
         ROW_LEFT,
         ROW_RIGHT,
