@@ -2,25 +2,25 @@ package TorusPuzzle;
 
 import java.util.Arrays;
 
-public class TorusPuzzle {
-
+public class TorusPuzzle
+{
     private int[][] values;
 
     public TorusPuzzle(int rowDim, int colDim)
     {
-        assert(rowDim > 0);
-        assert(colDim > 0);
+        assert (rowDim > 0);
+        assert (colDim > 0);
         this.values = new int[rowDim][colDim];
 
-        for(int i = 0; i < rowDim; ++i)
-            for(int j = 0; j < colDim; ++j)
+        for (int i = 0; i < rowDim; ++i)
+            for (int j = 0; j < colDim; ++j)
                 this.values[i][j] = 1 + i * colDim + j;
     }
 
     public int getValue(int i, int j)
     {
-        assert(i < rowDim());
-        assert(j < colDim());
+        assert (i < rowDim());
+        assert (j < colDim());
         return values[i][j];
     }
 
@@ -41,18 +41,36 @@ public class TorusPuzzle {
 
     public void shuffle()
     {
+        shuffle(100000);
+    }
 
+    public void shuffle(int nbMoves)
+    {
+        for (int i = 0; i < nbMoves; ++i)
+        {
+            execute(randomMove());
+        }
+    }
+
+    public void shuffle(int nbMoves, MoveSequence outputSequence)
+    {
+        for (int i = 0; i < nbMoves; ++i)
+        {
+            outputSequence.add(randomMove());
+        }
+
+        execute(outputSequence);
     }
 
     public void execute(MoveSequence moveSequence)
     {
-        for(int i = 0; i < moveSequence.length(); ++i)
+        for (int i = 0; i < moveSequence.length(); ++i)
             execute(moveSequence.getMove(i));
     }
 
     public void execute(Move move)
     {
-        switch(move.direction)
+        switch (move.direction)
         {
             case ROW_LEFT:
                 moveRowLeft(move.lineIdx);
@@ -73,25 +91,25 @@ public class TorusPuzzle {
 
     private void moveRowLeft(int idx)
     {
-        assert(idx < rowDim());
+        assert (idx < rowDim());
         int shiftedValue = values[idx][0];
 
-        for(int j = 0; j < colDim()-1; ++j)
+        for (int j = 0; j < colDim() - 1; ++j)
         {
-            values[idx][j] = values[idx][j+1];
+            values[idx][j] = values[idx][j + 1];
         }
 
-        values[idx][colDim()-1] = shiftedValue;
+        values[idx][colDim() - 1] = shiftedValue;
     }
 
     private void moveRowRight(int idx)
     {
-        assert(idx < rowDim());
-        int shiftedValue = values[idx][colDim()-1];
+        assert (idx < rowDim());
+        int shiftedValue = values[idx][colDim() - 1];
 
-        for(int j = colDim()-1; j > 0; --j)
+        for (int j = colDim() - 1; j > 0; --j)
         {
-            values[idx][j] = values[idx][j-1];
+            values[idx][j] = values[idx][j - 1];
         }
 
         values[idx][0] = shiftedValue;
@@ -99,28 +117,57 @@ public class TorusPuzzle {
 
     private void moveColumnUp(int idx)
     {
-        assert(idx < colDim());
+        assert (idx < colDim());
         int shiftedValue = values[0][idx];
 
-        for(int i = 0; i < rowDim()-1; ++i)
+        for (int i = 0; i < rowDim() - 1; ++i)
         {
-            values[i][idx] = values[i+1][idx];
+            values[i][idx] = values[i + 1][idx];
         }
 
-        values[rowDim()-1][idx] = shiftedValue;
+        values[rowDim() - 1][idx] = shiftedValue;
     }
 
     private void moveColumnDown(int idx)
     {
-        assert(idx < colDim());
-        int shiftedValue = values[rowDim()-1][idx];
+        assert (idx < colDim());
+        int shiftedValue = values[rowDim() - 1][idx];
 
-        for(int i = rowDim()-1; i > 0; --i)
+        for (int i = rowDim() - 1; i > 0; --i)
         {
-            values[i][idx] = values[i-1][idx];
+            values[i][idx] = values[i - 1][idx];
         }
 
         values[0][idx] = shiftedValue;
+    }
+
+    public Move randomMove()
+    {
+        Move.EDirection d = Move.EDirection.ROW_LEFT;
+        int idx = 0;
+        double rand = Math.random() * 4;
+        if (rand < 1)
+        {
+            d = Move.EDirection.ROW_LEFT;
+            idx = (int)(Math.random() * rowDim());
+        }
+        else if (rand < 2)
+        {
+            d = Move.EDirection.ROW_RIGHT;
+            idx = (int)(Math.random() * rowDim());
+        }
+        else if (rand < 3)
+        {
+            d = Move.EDirection.COLUMN_DOWN;
+            idx = (int)(Math.random() * colDim());
+        }
+        else if (rand < 4)
+        {
+            d = Move.EDirection.COLUMN_UP;
+            idx = (int)(Math.random() * colDim());
+        }
+
+        return new Move(idx, d);
     }
 
 }

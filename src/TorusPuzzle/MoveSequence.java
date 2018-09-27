@@ -26,4 +26,16 @@ public class MoveSequence {
         assert(idx < length());
         return moves.get(idx);
     }
+
+    public MoveSequence reverseSequence()
+    {
+        MoveSequence sequence = new MoveSequence();
+
+        for(int i = moves.size()-1; i >= 0; --i)
+            {
+            sequence.add(getMove(i).reverseMove());
+        }
+
+        return sequence;
+    }
 }
