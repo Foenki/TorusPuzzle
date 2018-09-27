@@ -19,6 +19,27 @@ public class Move {
         this.lineIdx = lineIdx;
     }
 
+    public String toString()
+    {
+        String s = new String();
+        switch(direction)
+        {
+            case ROW_LEFT:
+                s += "R" + lineIdx + "-";
+                break;
+            case ROW_RIGHT:
+                s += "R" + lineIdx + "+";
+                break;
+            case COLUMN_UP:
+                s += "C" + lineIdx + "-";
+                break;
+            case COLUMN_DOWN:
+                s += "C" + lineIdx + "+";
+                break;
+        }
+        return s;
+    }
+
     public Move reverseMove()
     {
         EDirection d = EDirection.ROW_LEFT;

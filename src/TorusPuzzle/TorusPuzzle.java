@@ -17,6 +17,22 @@ public class TorusPuzzle
                 this.values[i][j] = 1 + i * colDim + j;
     }
 
+    public String toString()
+    {
+        String s = new String();
+        for(int i = 0; i < rowDim(); ++i)
+        {
+            s += "[";
+            for(int j = 0; j < colDim(); ++j)
+            {
+                s += getValue(i, j) + (j < colDim()-1 ? "," : "");
+            }
+            s += "]\n";
+        }
+
+       return s;
+    }
+
     public int getValue(int i, int j)
     {
         assert (i < rowDim());

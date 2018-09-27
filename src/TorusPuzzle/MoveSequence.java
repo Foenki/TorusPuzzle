@@ -11,6 +11,17 @@ public class MoveSequence {
         this.moves = new Vector<Move>();
     }
 
+    public String toString()
+    {
+        String s = new String("[");
+        for(int i = 0; i < length(); ++i)
+        {
+            s += getMove(i).toString() + (i < length()-1 ? " " : "");
+        }
+        s += "]";
+        return s;
+    }
+
     public void add(Move move)
     {
         moves.add(move);
