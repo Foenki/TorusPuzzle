@@ -25,8 +25,8 @@
       <file leaf-file-name="Window2D.java" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Visualization2D/Window2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+            <state relative-caret-position="335">
+              <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,8 +37,8 @@
       <file leaf-file-name="TorusPanel.java" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Visualization2D/TorusPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="377">
+              <caret line="39" column="118" lean-forward="false" selection-start-line="39" selection-start-column="118" selection-end-line="39" selection-end-column="118" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,9 +143,9 @@
         <option value="$PROJECT_DIR$/src/Tests/TestBasicOperations.java" />
         <option value="$PROJECT_DIR$/src/Visualization2D/Draw2DObjects.java" />
         <option value="$PROJECT_DIR$/src/Visualization2D/Panneau.java" />
-        <option value="$PROJECT_DIR$/src/Visualization2D/TorusPanel.java" />
         <option value="$PROJECT_DIR$/src/Visualization2D/Visualization2D.java" />
         <option value="$PROJECT_DIR$/src/TorusPuzzle/MoveSequence.java" />
+        <option value="$PROJECT_DIR$/src/Visualization2D/TorusPanel.java" />
         <option value="$PROJECT_DIR$/src/Visualization2D/Window2D.java" />
       </list>
     </option>
@@ -484,14 +484,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TorusPuzzle/TextDisplayer.java" />
-    <entry file="file://$PROJECT_DIR$/src/Visualization2D/Visualization2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TorusPuzzle/TorusPuzzle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -505,16 +497,6 @@
             <element signature="e#1105#1106#0" expanded="true" />
             <element signature="e#1138#1139#0" expanded="true" />
             <element signature="e#1169#1170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visualization2D/TorusPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -552,10 +534,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visualization2D/TorusPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="39" column="118" lean-forward="false" selection-start-line="39" selection-start-column="118" selection-end-line="39" selection-end-column="118" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visualization2D/Visualization2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visualization2D/Window2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+        <state relative-caret-position="335">
+          <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
