@@ -27,6 +27,14 @@ public class MoveSequence {
         moves.add(move);
     }
 
+    public void add(MoveSequence sequence)
+    {
+        for(int i = 0; i < sequence.length(); ++i)
+        {
+            add(sequence.getMove(i));
+        }
+    }
+
     public int length()
     {
         return moves.size();
